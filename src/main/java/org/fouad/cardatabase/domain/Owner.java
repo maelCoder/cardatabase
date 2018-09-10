@@ -9,6 +9,9 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.OneToMany;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
@@ -17,6 +20,7 @@ import lombok.Setter;
 @NoArgsConstructor
 @Getter
 @Setter
+@JsonIgnoreProperties({"hibernateLazyInitializer", "handler"})
 public class Owner {
 
 	@Id
@@ -25,6 +29,7 @@ public class Owner {
     private String firstname;
     private String lastname;
     @OneToMany(cascade = CascadeType.ALL, mappedBy="owner")
+    @JsonIgnore
     private List<Car> cars;
     
 	public Owner(String firstname, String lastname) {
