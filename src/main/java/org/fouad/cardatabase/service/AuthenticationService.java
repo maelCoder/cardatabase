@@ -59,7 +59,7 @@ public class AuthenticationService {
 
 	private static Date getTokenExpirationTime(long expirationTime) {
 		Date expiration = Date.from(
-				LocalDateTime.now().plusDays(expirationTime).toInstant(ZoneOffset.of(ZoneId.systemDefault().getId())));
+				LocalDateTime.now().plusDays(expirationTime).atZone(ZoneId.systemDefault()).toInstant());
 		return expiration;
 	}
 }
