@@ -8,7 +8,9 @@ spring:
     show-sql: true
     generate-ddl: true
     hibernate.ddl-auto: create-drop
-    properties.hibernate.dialect: org.hibernate.dialect.PostgreSQLDialect
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQL9Dialect
       
   data:
     rest:
