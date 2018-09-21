@@ -8,7 +8,8 @@ spring:
     show-sql: true
     generate-ddl: true
     hibernate.ddl-auto: create-drop
-    
+    properties.hibernate.dialect: org.hibernate.dialect.PostgreSQLDialect
+      
   data:
     rest:
       base-path: /api
@@ -21,4 +22,5 @@ spring:
     username: cersmvihkutcja
     password: 49020d475f44898ecb7a86ea907ffe3d43182f6996166d57b022ec21d83048bd
     driver-class-name: org.postgresql.Driver
+
     
