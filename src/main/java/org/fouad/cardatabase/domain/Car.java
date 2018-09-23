@@ -28,7 +28,7 @@ public class Car {
 	private String registerNumber;
 	private Integer year;
 	private Integer price;
-	@Column(name = "desc", nullable = false, length = 512)
+	@Column(name = "description", nullable = false, length = 512)
 	private String description;
 	@ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "owner")
