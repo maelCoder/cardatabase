@@ -2,12 +2,12 @@ logging:
   level:
     root: INFO
 server:
-  port: 8080
+  port: ${PORT}
 spring:
   jpa:
     show-sql: true
     generate-ddl: true
-    hibernate.ddl-auto: update
+    hibernate.ddl-auto: create-drop
     properties:
       hibernate:
         dialect: org.hibernate.dialect.PostgreSQL9Dialect
